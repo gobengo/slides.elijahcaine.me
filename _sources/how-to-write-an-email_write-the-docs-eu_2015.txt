@@ -1,6 +1,4 @@
-
-.. How to Write an Email slides file, created by
-   hieroglyphquickstart on Sun Aug  2 12:47:18 2015.
+.. _how-to-write-an-email_write-the-docs-eu_2015:
 
 =====================
 How to Write an Email

@@ -1,7 +1,4 @@
-
-.. A History of `$ man` slides file, created by
-   hieroglyph-quickstart on Mon Jan 19 20:26:04 2015.
-
+.. _history-of-man_osu-lug_2015:
 
 A History of `$ man`
 ====================

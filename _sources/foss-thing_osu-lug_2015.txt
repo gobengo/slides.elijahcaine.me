@@ -1,7 +1,4 @@
-
-.. LUG Spring FOSS Thing 2015 slides file, created by
-   hieroglyph-quickstart on Tue Apr  7 09:19:01 2015.
-
+.. _foss-thing_osu-lug_2015:
 
 LUG Spring FOSS Thing 2015
 ==========================

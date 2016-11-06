@@ -1,7 +1,4 @@
-
-.. HuRandom slides file, created by
-   hieroglyph-quickstart on Mon Apr 13 21:59:25 2015.
-
+.. _hurandom_beaver-barcamp_2015:
 
 HuRandom
 ========

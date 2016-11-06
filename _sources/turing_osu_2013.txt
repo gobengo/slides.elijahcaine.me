@@ -1,7 +1,4 @@
-
-.. Project 2 - The Turing Machine slides file, created by
-   hieroglyph-quickstart on Fri Oct 31 11:16:47 2014.
-
+.. _turing_osu_2013:
 
 The Turing Machine
 ==================

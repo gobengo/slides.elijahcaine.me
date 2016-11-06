@@ -1,3 +1,5 @@
+.. _introduction-to-blender_scale_2015:
+
 Blender: Lights, Camera, Action! 
 ================================
 

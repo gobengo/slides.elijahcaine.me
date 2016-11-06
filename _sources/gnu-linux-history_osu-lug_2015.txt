@@ -1,7 +1,4 @@
-
-.. A History of GNU/Linux slides file, created by
-   hieroglyph-quickstart on Mon Nov  3 11:11:31 2014.
-
+.. _gnu-linux-history_osu-lug_2015:
 
 A History of GNU/Linux
 ======================
