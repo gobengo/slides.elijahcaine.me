@@ -64,7 +64,25 @@
     <span class="n">high</span><span class="o">-</span><span class="n">level</span> <span class="n">operations</span> <span class="ow">and</span> <span class="n">full</span> <span class="n">access</span> <span class="n">to</span> <span class="n">internals</span><span class="o">.</span>
 </pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">git</span> <span class="pre">init</span></code> ------------</p>
+
+
+
+
+</article>
+<article class="slide level-2" id="rundown">
+
+<h2>Rundown</h2>
+
+<img alt="git dataflow diagram" class="align-center" src="images/git-dataflow.png" />
+
+
+
+
+</article>
+<article class="slide level-2" id="git-init">
+
+<h2><code class="docutils literal"><span class="pre">git</span> <span class="pre">init</span></code></h2>
+
 <div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">NAME</span>
     <span class="n">git</span><span class="o">-</span><span class="n">init</span> <span class="o">-</span> <span class="n">Create</span> <span class="n">an</span> <span class="n">empty</span> <span class="n">Git</span> <span class="n">repository</span> <span class="ow">or</span> <span class="n">reinitialize</span>
     <span class="n">an</span> <span class="n">existing</span> <span class="n">one</span>
@@ -399,19 +417,21 @@
     <span class="n">git</span><span class="o">-</span><span class="n">rm</span> <span class="o">-</span> <span class="n">Remove</span> <span class="n">files</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">working</span> <span class="n">tree</span> <span class="ow">and</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">index</span>
 
 <span class="n">SYNOPSIS</span>
-    <span class="n">git</span> <span class="n">rm</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="o">|</span> <span class="o">--</span><span class="n">force</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cached</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">unmatch</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">quiet</span><span class="p">]</span>
-           <span class="p">[</span><span class="o">--</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;...</span>
+    <span class="n">git</span> <span class="n">rm</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="o">|</span> <span class="o">--</span><span class="n">force</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cached</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">unmatch</span><span class="p">]</span>
+    <span class="p">[</span><span class="o">--</span><span class="n">quiet</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;...</span>
 
 <span class="n">DESCRIPTION</span>
-    <span class="n">Remove</span> <span class="n">files</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">index</span><span class="p">,</span> <span class="ow">or</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">working</span> <span class="n">tree</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">index</span><span class="o">.</span>
-    <span class="n">git</span> <span class="n">rm</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">remove</span> <span class="n">a</span> <span class="n">file</span> <span class="kn">from</span> <span class="nn">just</span> <span class="n">your</span> <span class="n">working</span> <span class="n">directory</span><span class="o">.</span>  <span class="p">(</span><span class="n">There</span>
-    <span class="ow">is</span> <span class="n">no</span> <span class="n">option</span> <span class="n">to</span> <span class="n">remove</span> <span class="n">a</span> <span class="n">file</span> <span class="n">only</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">working</span> <span class="n">tree</span> <span class="ow">and</span> <span class="n">yet</span> <span class="n">keep</span>
-    <span class="n">it</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">index</span><span class="p">;</span> <span class="n">use</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">rm</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">do</span> <span class="n">that</span><span class="o">.</span><span class="p">)</span> <span class="n">The</span> <span class="n">files</span> <span class="n">being</span>
-    <span class="n">removed</span> <span class="n">have</span> <span class="n">to</span> <span class="n">be</span> <span class="n">identical</span> <span class="n">to</span> <span class="n">the</span> <span class="n">tip</span> <span class="n">of</span> <span class="n">the</span> <span class="n">branch</span><span class="p">,</span> <span class="ow">and</span> <span class="n">no</span> <span class="n">updates</span>
-    <span class="n">to</span> <span class="n">their</span> <span class="n">contents</span> <span class="n">can</span> <span class="n">be</span> <span class="n">staged</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">index</span><span class="p">,</span> <span class="n">though</span> <span class="n">that</span> <span class="n">default</span>
-    <span class="n">behavior</span> <span class="n">can</span> <span class="n">be</span> <span class="n">overridden</span> <span class="k">with</span> <span class="n">the</span> <span class="o">-</span><span class="n">f</span> <span class="n">option</span><span class="o">.</span> <span class="n">When</span> <span class="o">--</span><span class="n">cached</span> <span class="ow">is</span> <span class="n">given</span><span class="p">,</span>
-    <span class="n">the</span> <span class="n">staged</span> <span class="n">content</span> <span class="n">has</span> <span class="n">to</span> <span class="n">match</span> <span class="n">either</span> <span class="n">the</span> <span class="n">tip</span> <span class="n">of</span> <span class="n">the</span> <span class="n">branch</span> <span class="ow">or</span> <span class="n">the</span>
-    <span class="n">file</span> <span class="n">on</span> <span class="n">disk</span><span class="p">,</span> <span class="n">allowing</span> <span class="n">the</span> <span class="n">file</span> <span class="n">to</span> <span class="n">be</span> <span class="n">removed</span> <span class="kn">from</span> <span class="nn">just</span> <span class="n">the</span> <span class="n">index</span><span class="o">.</span>
+    <span class="n">Remove</span> <span class="n">files</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">index</span><span class="p">,</span> <span class="ow">or</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">working</span> <span class="n">tree</span> <span class="ow">and</span> <span class="n">the</span>
+    <span class="n">index</span><span class="o">.</span>  <span class="n">git</span> <span class="n">rm</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">remove</span> <span class="n">a</span> <span class="n">file</span> <span class="kn">from</span> <span class="nn">just</span> <span class="n">your</span> <span class="n">working</span>
+    <span class="n">directory</span><span class="o">.</span>  <span class="p">(</span><span class="n">There</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">option</span> <span class="n">to</span> <span class="n">remove</span> <span class="n">a</span> <span class="n">file</span> <span class="n">only</span> <span class="kn">from</span> <span class="nn">the</span>
+    <span class="n">working</span> <span class="n">tree</span> <span class="ow">and</span> <span class="n">yet</span> <span class="n">keep</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">index</span><span class="p">;</span> <span class="n">use</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">rm</span> <span class="k">if</span> <span class="n">you</span>
+    <span class="n">want</span> <span class="n">to</span> <span class="n">do</span> <span class="n">that</span><span class="o">.</span><span class="p">)</span> <span class="n">The</span> <span class="n">files</span> <span class="n">being</span> <span class="n">removed</span> <span class="n">have</span> <span class="n">to</span> <span class="n">be</span> <span class="n">identical</span>
+    <span class="n">to</span> <span class="n">the</span> <span class="n">tip</span> <span class="n">of</span> <span class="n">the</span> <span class="n">branch</span><span class="p">,</span> <span class="ow">and</span> <span class="n">no</span> <span class="n">updates</span> <span class="n">to</span> <span class="n">their</span> <span class="n">contents</span> <span class="n">can</span>
+    <span class="n">be</span> <span class="n">staged</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">index</span><span class="p">,</span> <span class="n">though</span> <span class="n">that</span> <span class="n">default</span> <span class="n">behavior</span> <span class="n">can</span> <span class="n">be</span>
+    <span class="n">overridden</span> <span class="k">with</span> <span class="n">the</span> <span class="o">-</span><span class="n">f</span> <span class="n">option</span><span class="o">.</span> <span class="n">When</span> <span class="o">--</span><span class="n">cached</span> <span class="ow">is</span> <span class="n">given</span><span class="p">,</span> <span class="n">the</span>
+    <span class="n">staged</span> <span class="n">content</span> <span class="n">has</span> <span class="n">to</span> <span class="n">match</span> <span class="n">either</span> <span class="n">the</span> <span class="n">tip</span> <span class="n">of</span> <span class="n">the</span> <span class="n">branch</span> <span class="ow">or</span>
+    <span class="n">the</span> <span class="n">file</span> <span class="n">on</span> <span class="n">disk</span><span class="p">,</span> <span class="n">allowing</span> <span class="n">the</span> <span class="n">file</span> <span class="n">to</span> <span class="n">be</span> <span class="n">removed</span> <span class="kn">from</span> <span class="nn">just</span>
+    <span class="n">the</span> <span class="n">index</span><span class="o">.</span>
 </pre></div>
 </div>
 
@@ -427,18 +447,20 @@
     <span class="n">git</span><span class="o">-</span><span class="n">grep</span> <span class="o">-</span> <span class="n">Print</span> <span class="n">lines</span> <span class="n">matching</span> <span class="n">a</span> <span class="n">pattern</span>
 
 <span class="n">SYNOPSIS</span>
-    <span class="n">git</span> <span class="n">grep</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span> <span class="o">|</span> <span class="o">--</span><span class="n">text</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">I</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">textconv</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="o">|</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">case</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">w</span> <span class="o">|</span> <span class="o">--</span><span class="n">word</span><span class="o">-</span><span class="n">regexp</span><span class="p">]</span>
+    <span class="n">git</span> <span class="n">grep</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span> <span class="o">|</span> <span class="o">--</span><span class="n">text</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">I</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">textconv</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="o">|</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">case</span><span class="p">]</span>
+               <span class="p">[</span><span class="o">-</span><span class="n">w</span> <span class="o">|</span> <span class="o">--</span><span class="n">word</span><span class="o">-</span><span class="n">regexp</span><span class="p">]</span>
              <span class="p">[</span><span class="o">-</span><span class="n">v</span> <span class="o">|</span> <span class="o">--</span><span class="n">invert</span><span class="o">-</span><span class="n">match</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="o">|-</span><span class="n">H</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">full</span><span class="o">-</span><span class="n">name</span><span class="p">]</span>
              <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">e</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">pattern</span><span class="o">&gt;</span>
-             <span class="p">[</span> <span class="p">[</span><span class="o">--</span><span class="p">[</span><span class="n">no</span><span class="o">-</span><span class="p">]</span><span class="n">exclude</span><span class="o">-</span><span class="n">standard</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cached</span> <span class="o">|</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">index</span> <span class="o">|</span> <span class="o">--</span><span class="n">untracked</span><span class="p">]</span> <span class="o">|</span> <span class="o">&lt;</span><span class="n">tree</span><span class="o">&gt;...</span><span class="p">]</span>
+             <span class="p">[</span> <span class="p">[</span><span class="o">--</span><span class="p">[</span><span class="n">no</span><span class="o">-</span><span class="p">]</span><span class="n">exclude</span><span class="o">-</span><span class="n">standard</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cached</span> <span class="o">|</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">index</span> <span class="o">|</span>
+               <span class="o">--</span><span class="n">untracked</span><span class="p">]</span> <span class="o">|</span> <span class="o">&lt;</span><span class="n">tree</span><span class="o">&gt;...</span><span class="p">]</span>
              <span class="p">[</span><span class="o">--</span><span class="p">]</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pathspec</span><span class="o">&gt;...</span><span class="p">]</span>
 
 <span class="n">DESCRIPTION</span>
-    <span class="n">Look</span> <span class="k">for</span> <span class="n">specified</span> <span class="n">patterns</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">tracked</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">work</span> <span class="n">tree</span><span class="p">,</span>
-    <span class="n">blobs</span> <span class="n">registered</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">index</span> <span class="n">file</span><span class="p">,</span> <span class="ow">or</span> <span class="n">blobs</span> <span class="ow">in</span> <span class="n">given</span> <span class="n">tree</span> <span class="n">objects</span><span class="o">.</span>
-    <span class="n">Patterns</span> <span class="n">are</span> <span class="n">lists</span> <span class="n">of</span> <span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">search</span> <span class="n">expressions</span> <span class="n">separated</span> <span class="n">by</span>
-    <span class="n">newline</span> <span class="n">characters</span><span class="o">.</span> <span class="n">An</span> <span class="n">empty</span> <span class="n">string</span> <span class="k">as</span> <span class="n">search</span> <span class="n">expression</span> <span class="n">matches</span> <span class="nb">all</span>
-    <span class="n">lines</span><span class="o">.</span>
+    <span class="n">Look</span> <span class="k">for</span> <span class="n">specified</span> <span class="n">patterns</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">tracked</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">work</span>
+    <span class="n">tree</span><span class="p">,</span> <span class="n">blobs</span> <span class="n">registered</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">index</span> <span class="n">file</span><span class="p">,</span> <span class="ow">or</span> <span class="n">blobs</span> <span class="ow">in</span> <span class="n">given</span>
+    <span class="n">tree</span> <span class="n">objects</span><span class="o">.</span>  <span class="n">Patterns</span> <span class="n">are</span> <span class="n">lists</span> <span class="n">of</span> <span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">search</span>
+    <span class="n">expressions</span> <span class="n">separated</span> <span class="n">by</span> <span class="n">newline</span> <span class="n">characters</span><span class="o">.</span> <span class="n">An</span> <span class="n">empty</span> <span class="n">string</span>
+    <span class="k">as</span> <span class="n">search</span> <span class="n">expression</span> <span class="n">matches</span> <span class="nb">all</span> <span class="n">lines</span><span class="o">.</span>
 </pre></div>
 </div>
 
@@ -460,7 +482,8 @@
        <span class="n">Move</span> <span class="ow">or</span> <span class="n">rename</span> <span class="n">a</span> <span class="n">file</span><span class="p">,</span> <span class="n">directory</span> <span class="ow">or</span> <span class="n">symlink</span><span class="o">.</span>
 
            <span class="n">git</span> <span class="n">mv</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">destination</span><span class="o">&gt;</span>
-           <span class="n">git</span> <span class="n">mv</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span> <span class="o">...</span> <span class="o">&lt;</span><span class="n">destination</span> <span class="n">directory</span><span class="o">&gt;</span>
+           <span class="n">git</span> <span class="n">mv</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span> <span class="o">...</span> <span class="o">&lt;</span><span class="n">destination</span>
+             <span class="n">directory</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 
@@ -479,9 +502,9 @@ SYNOPSIS
     $HOME/.config/git/ignore, $GIT_DIR/info/exclude, .gitignore
 
 DESCRIPTION
-    A gitignore file specifies intentionally untracked files that Git
-    should ignore. Files already tracked by Git are not affected; see
-    the NOTES below for details.
+    A gitignore file specifies intentionally untracked files that
+    Git should ignore. Files already tracked by Git are not
+    affected; see the NOTES below for details.
 </pre></div>
 </div>
 
@@ -497,6 +520,19 @@ DESCRIPTION
    <span class="n">indicates</span> <span class="n">the</span> <span class="n">head</span> <span class="n">of</span> <span class="n">the</span> <span class="n">current</span> <span class="n">branch</span><span class="o">.</span>
 </pre></div>
 </div>
+
+
+
+
+</article>
+<article class="slide level-2" id="reference">
+
+<h2>Reference</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://git-scm.com/">git-scm.com</a>: Tutorials, docs, resources. Everything <code class="docutils literal"><span class="pre">git</span></code>.</li>
+<li><a class="reference external" href="https://help.github.com/">GitHub</a> also has some great tutorials.</li>
+</ul>
 
 
 
