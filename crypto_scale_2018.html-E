@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Crypto &mdash; Elijah C. Voigt: Slides 0.1.0 documentation</title>
+    <title>Crypto &mdash; Elijah Caine M. Voigt: Slides 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="static/basic.css" type="text/css" />
     <link rel="stylesheet" href="static/styles.css" type="text/css" />
@@ -37,7 +37,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="Elijah C. Voigt: Slides 0.1.0 documentation" href="index.html" />
+    <link rel="top" title="Elijah Caine M. Voigt: Slides 0.1.0 documentation" href="index.html" />
     <link rel="next" title="LUG Spring FOSS Thing 2015" href="foss-thing_osu-lug_2015.html" />
     <link rel="prev" title="Crypto" href="crypto/index.html" /> 
   </head>
@@ -67,11 +67,13 @@
 
 <h2>Elijah Caine M. Voigt</h2>
 
-<p>DevOps Engineer at Nordstrom</p>
-<p>Recent BS in CS from Oregon State</p>
-<p><a class="reference external" href="https://elijahcaine.me">https://elijahcaine.me</a></p>
-<p><a class="reference external" href="https://github.com/pop">https://github.com/pop</a></p>
-<a class="reference external image-reference" href="http://www.reactiongifs.com/r/fash.gif"><img alt="images/fashion.gif" class="align-center" src="images/fashion.gif" style="width: 50%;" /></a>
+<ul class="simple">
+<li>DevOps Engineer at Nordstrom</li>
+<li>Recent BS in CS from Oregon State</li>
+<li>Blog <a class="reference external" href="https://elijahcaine.me">https://elijahcaine.me</a></li>
+<li>Twitter &#64;pastyWhiteNoise</li>
+</ul>
+<a class="reference external image-reference" href="http://www.reactiongifs.com/r/fash.gif"><img alt="images/fashion.gif" class="align-right" src="images/fashion.gif" style="width: 50%;" /></a>
 
 
 
@@ -126,7 +128,7 @@ A protocol for exchanging public keys over an insecure channel.</q>
 
 <h2>Elliptic Curve Crytography</h2>
 
-<img alt="images/elliptic-curve-cryptography-1.hires.png" class="align-center" src="images/elliptic-curve-cryptography-1.hires.png" />
+<a class="reference internal image-reference" href="images/elliptic-curve-cryptography-1.hires.png"><img alt="images/elliptic-curve-cryptography-1.hires.png" class="align-center" src="images/elliptic-curve-cryptography-1.hires.png" style="width: 100%;" /></a>
 
 
 
@@ -147,7 +149,7 @@ Public Key Cryprography which uses special properties of Elliptic Curves to crea
 
 <h3>&quot;Addition&quot;</h3>
 
-<img alt="images/ecc-3.png" class="align-center" src="images/ecc-3.png" />
+<a class="reference internal image-reference" href="images/ecc-3.png"><img alt="images/ecc-3.png" class="align-center" src="images/ecc-3.png" style="width: 100%;" /></a>
 
 
 
@@ -173,7 +175,7 @@ Public Key Cryprography which uses special properties of Elliptic Curves to crea
 
 <h3>&quot;Multiplication&quot;</h3>
 
-<img alt="images/ecc-4.png" class="align-center" src="images/ecc-4.png" />
+<a class="reference internal image-reference" href="images/ecc-4.png"><img alt="images/ecc-4.png" class="align-center" src="images/ecc-4.png" style="width: 100%;" /></a>
 
 
 
@@ -360,7 +362,7 @@ A function that takes arbitrary size input and returns unique constant size outp
 
 <h2>Memory Hard Functions</h2>
 
-<img alt="images/dag-animated.gif" class="align-center" src="images/dag-animated.gif" />
+<a class="reference internal image-reference" href="images/dag-animated.gif"><img alt="images/dag-animated.gif" class="align-center" src="images/dag-animated.gif" style="width: 100%;" /></a>
 
 
 
@@ -381,7 +383,7 @@ Hashing functions which are difficult to compute in memory-constrained systems.<
 
 <h3>Directed Acyclic Graphs</h3>
 
-<img alt="images/DAG.gif" class="align-center" src="images/DAG.gif" />
+<a class="reference internal image-reference" href="images/DAG.gif"><img alt="images/DAG.gif" class="align-center" src="images/DAG.gif" style="width: 100%;" /></a>
 
 
 
@@ -391,7 +393,7 @@ Hashing functions which are difficult to compute in memory-constrained systems.<
 
 <h3>Directed Acyclic Graphs</h3>
 
-<img alt="images/dag-animated.gif" class="align-center" src="images/dag-animated.gif" />
+<a class="reference internal image-reference" href="images/dag-animated.gif"><img alt="images/dag-animated.gif" class="align-center" src="images/dag-animated.gif" style="width: 100%;" /></a>
 
 
 
@@ -457,7 +459,7 @@ Evaluation of a program without knowledge of it's inputs.</q>
 
 <h2>Garbled Circuits</h2>
 
-<img alt="images/garbled-circuit.jpg" class="align-center" src="images/garbled-circuit.jpg" />
+<a class="reference internal image-reference" href="images/garbled-circuit.jpg"><img alt="images/garbled-circuit.jpg" class="align-center" src="images/garbled-circuit.jpg" style="width: 100%;" /></a>
 
 
 
@@ -679,7 +681,7 @@ That would make using OT (step 6) obtuse.</p>
 
 <h3>Why it all matters</h3>
 
-<a class="reference external image-reference" href="https://tenor.com/view/batman-gif-4575661"><img alt="images/batman.gif" class="align-center" src="images/batman.gif" /></a>
+<a class="reference external image-reference" href="https://tenor.com/view/batman-gif-4575661"><img alt="images/batman.gif" class="align-center" src="images/batman.gif" style="width: 100%;" /></a>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>This matters for a few reasons:</p>
