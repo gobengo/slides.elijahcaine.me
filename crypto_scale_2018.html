@@ -433,7 +433,7 @@ Hashing functions which are difficult to compute in memory-constrained systems.<
 <h2>Secure multi-party computation</h2>
 
 <q>
-Evaluation of a program without knowledge of it's inputs.</q>
+Evaluation of a program without knowledge of it's inputs or contents.</q>
 
 
 
@@ -649,7 +649,7 @@ An implementation of secure multi-party calculations.</q>
 <ol class="arabic simple" start="5">
 <li>Bob takes Alice's input(s), <code class="docutils literal"><span class="pre">KxA</span></code>.</li>
 <li>Bob uses oblivious transfer to compute is input <code class="docutils literal"><span class="pre">KyB</span></code>.</li>
-<li>Bob can run the circuit. <code class="docutils literal"><span class="pre">decrypt_or(</span> <span class="pre">KxA</span> <span class="pre">,</span> <span class="pre">KyB</span> <span class="pre">)</span></code> outputs 0 or 1.</li>
+<li>Bob can run the circuit. <code class="docutils literal"><span class="pre">garbled_OR(</span> <span class="pre">KxA</span> <span class="pre">,</span> <span class="pre">KyB</span> <span class="pre">)</span></code> outputs 0 or 1.</li>
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -668,6 +668,7 @@ That would make using OT (step 6) obtuse.</p>
 
 <h3>Why we care about GCs</h3>
 
+<p>Contact sharing.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Good question.</p>
